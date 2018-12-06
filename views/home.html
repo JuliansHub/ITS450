@@ -1,0 +1,65 @@
+<!-- box begin -->
+<div class="box alt">
+	<div class="left-top-corner">
+   	<div class="right-top-corner">
+      	<div class="border-top"></div>
+      </div>
+   </div>
+   <div class="border-left">
+   	<div class="border-right">
+      	<div class="inner">
+         	<div class="wrapper"><?php // Check for sales!
+
+// If records are returned, include the view:
+if (mysqli_num_rows($r) > 0) {
+	
+	echo '<dl class="special fright">
+		<dt><a href="/shop/sales/">Sale Items</a></dt>';
+
+	// Fetch each item:
+	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+		echo '<dd><a href="/shop/sales/#' . $row['sku'] . '" title="View This Product"><img alt="" src="/products/' . $row['image'] . '" /><span>' . $row['sale_price'] . '</span></a></dd>';
+	}
+	
+	echo '</dl>';
+
+} // End of mysqli_num_rows() IF.
+?>
+               <h2>Welcome to CoolGuitars</h2>
+               <p>Since 2018, CoolGuitars has provided consumers the finest instruments at the best prices.</p>
+               <p>Browse our website, fill up your cart, and give us all of your money. </p>
+         	</div>
+         </div>
+      </div>
+   </div>
+   <div class="left-bot-corner">
+   	<div class="right-bot-corner">
+      	<div class="border-bot"></div>
+      </div>
+   </div>
+</div>
+<!-- box end -->
+<!-- box begin -->
+<div class="box">
+	<div class="left-top-corner">
+   	<div class="right-top-corner">
+      	<div class="border-top"></div>
+      </div>
+   </div>
+   <div class="border-left">
+   	<div class="border-right">
+      	<div class="inner">
+         	<h3>About CoolGuitars</h3>
+         	<p>CoolGuitars was founded in 1969 by Juilian Van Wijngaarden in the basement of a corner store.</p>
+         	<p>He got his first real six string when he bought it from five and dime.</p>
+		<p>He played until his fingers bled. It was the summer of '69.</p>
+      </div>	
+      </div>
+   </div>
+   <div class="left-bot-corner">
+   	<div class="right-bot-corner">
+      	<div class="border-bot"></div>
+      </div>
+   </div>
+</div>
+<!-- box end -->
